@@ -1,1 +1,15 @@
-<p>add-coffee-form-works!</p>
+<form>
+	<h3>New Coffee</h3>
+		<label for="brand">Brand</label><br>
+		<input type="text" id="brand" name="brand"><br>
+		<!--	grounds vs bean-->
+		<!--	single origin-->
+		<!--	grind slider-->
+		<!--	roast type-->
+		<label for="flavor-notes">Flavor Notes</label><br>
+		<input type="text" id="flavor-notes" name="flavor-notes"><br>
+		<div id="form-control-wrapper">
+			<button (click)="resetForm()">Reset Form</button>
+			<button (click)="submitForm()">Submit</button>
+		</div>
+</form>

@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './add-coffee-form.component.css'
 })
 export class AddCoffeeFormComponent {
+	resetForm() {
+		alert("reset")
+	}
 
+	submitForm() {
+		alert("submit")
+	}
 }
