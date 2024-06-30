@@ -21,4 +21,13 @@ export class CoffeeDataService {
 	findByBrand(brandName: string): Coffee[] | undefined {
 		return this.coffeeData.filter((coffee) => coffee.brand === brandName);
 	}
+
+	newCoffee(newCoffee: Coffee) {
+		let ids = coffeeData.map(coffee => coffee.id);
+		let highest = Math.max(...ids);
+		newCoffee.id = highest + 1;
+		this.coffeeData.push(newCoffee);
+		console.log(coffeeData);
+		return 'success';
+	}
 }

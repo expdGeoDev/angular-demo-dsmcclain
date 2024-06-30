@@ -1,15 +1,17 @@
-<form>
-	<h3>New Coffee</h3>
+<div id="form-wrapper">
+	<form (ngSubmit)="submitForm()">
+		<h3>New Coffee</h3>
 		<label for="brand">Brand</label><br>
-		<input type="text" id="brand" name="brand"><br>
+		<input id="brand" name="brand" [(ngModel)]="formData.brand" type="text"><br>
 		<!--	grounds vs bean-->
 		<!--	single origin-->
 		<!--	grind slider-->
 		<!--	roast type-->
 		<label for="flavor-notes">Flavor Notes</label><br>
-		<input type="text" id="flavor-notes" name="flavor-notes"><br>
+		<input id="flavor-notes" name="flavor-notes" [(ngModel)]="formData.flavorNotes" type="text" ><br>
 		<div id="form-control-wrapper">
 			<button (click)="resetForm()">Reset Form</button>
-			<button (click)="submitForm()">Submit</button>
+			<button type="submit">Submit</button>
 		</div>
-</form>
+	</form>
+</div>
